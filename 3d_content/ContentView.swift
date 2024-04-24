@@ -11,8 +11,7 @@ import SplineRuntime
 struct ContentView: View {
     var body: some View {
         VStack {
-            Rectangle()
-                .foregroundColor(.secondary)
+            Onboard3DView()
                 .frame(height: 500)
                 .ignoresSafeArea()
             VStack(spacing: 12) {
@@ -41,9 +40,8 @@ struct ContentView: View {
 
 #Preview { ContentView() }
 
-import SwiftUI
 
-struct ContentView: View {
+struct Onboard3DView: View {
     var body: some View {
         // fetching from cloud
         let url = URL(string: "https://build.spline.design/3YzWRa6A7gAOAKmQqA23/scene.splineswift")!
@@ -51,12 +49,6 @@ struct ContentView: View {
         // // fetching from local
         // let url = Bundle.main.url(forResource: "scene", withExtension: "splineswift")!
 
-        try? SplineView(sceneFileURL: url).ignoresSafeArea(.all)
-    }
-}
-
-struct Onboard3DView: View {
-    var body: some View {
-        
+        try? SplineView(sceneFileURL: url)
     }
 }
