@@ -23,6 +23,12 @@ struct ContentView: View {
                 
             }
             .padding(.horizontal)
+            
+            Spacer()
+            
+            Button("Get Started") {
+                // Button Action code goes here
+            }
         }
     }
 }
