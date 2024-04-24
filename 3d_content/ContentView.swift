@@ -29,6 +29,11 @@ struct ContentView: View {
             Button("Get Started") {
                 // Button Action code goes here
             }
+            .buttonStyle(.borderedProminent)
+//            .font(.title.bold())
+            .tint(.purple)
+            
+            Spacer()
         }
     }
 }
